@@ -127,7 +127,7 @@
 
  <script>  document.getElementById("initBtn").addEventListener("click", function () {
   alert("Welcome to the team! Your system is initialized.");
-});
+}); 
  </script>
 
 </body>
