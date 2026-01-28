@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Onboarding Profile</title>
 
   <style>
@@ -19,7 +20,8 @@
 
     .card {
       background-color: #ffffff;
-      width: 340px;
+      max-width: 340px;
+      width: 100%;
       padding: 24px;
       border-radius: 10px;
       box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
@@ -40,6 +42,12 @@
     h2 {
       font-size: 16px;
       margin-bottom: 10px;
+      color: #333;
+    }
+
+    h3 {
+      font-size: 15px;
+      margin: 0 0 8px 0;
       color: #333;
     }
 
@@ -104,8 +112,8 @@
     <!-- Step 4: PHP Server Integration -->
     <div class="system-info">
       <h3>Server Status: Online</h3>
-      <p><strong>Date & Time:</strong> <?php echo date('F j, Y, g:i a'); ?></p>
-      <p><strong>PHP Version:</strong> <?php echo phpversion(); ?></p>
+      <p><strong>Date & Time:</strong> <?php echo htmlspecialchars(date('F j, Y, g:i a')); ?></p>
+      <p><strong>PHP Version:</strong> <?php echo htmlspecialchars(phpversion()); ?></p>
     </div>
   </div>
 
